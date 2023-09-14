@@ -1,0 +1,36 @@
+<div class="row mt-5 mb-3">
+    <span class="">
+        <center><h1 >Email Genaretor </h1></center>
+    </span>
+    
+</div>
+
+
+<div class="card text-center">
+  <div class="card-header">
+    Featured
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Your Email Address  </h5>
+    <div class="card-text">
+     <div class="col-auto" id="textarea">
+        <%= @random_email %>
+        <%= button_tag "Copy Text", id: "copy-button", class: "btn btn-outline-primary", data: { clipboard_target: "#email-content" } %>
+      </div>
+
+      </div>
+
+    <%= link_to "Genaret Email", root_path, class: "btn btn-outline-success mt-2 "%>
+  </div>
+  <div class="card-footer text-body-secondary">
+    <% require 'date' %>
+    <% current_datetime = DateTime.now %>
+    <% one_day_later = current_datetime + 1 %>
+    <% one_week_earlier = current_datetime - 7 %>
+    <%= current_datetime %>
+  </div>
+</div>
+
+
+
+
